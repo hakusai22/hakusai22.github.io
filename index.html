@@ -50,7 +50,7 @@
   isHome: true,
   isHighlightShrink: true,
   isToc: false,
-  postUpdate: '2022-07-03 15:22:04'
+  postUpdate: '2022-07-03 15:26:18'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -191,18 +191,7 @@ ConcurrentHashMap相比HashMap而言，是多线程安全的，其底层数据�
 对于ConcurrentHashMap而言，添加了Unsafe实例，主要用于反射获取对象相应的字段。
 
 
-12345678910111213141516171819202122232425262728293031323334353637383940//版本号private static final long serialVersionUID = 7249069246763182397L;// node数组最大容量：2^30=1073741824private static final int MAXIMUM_CAPACITY = 1 &lt;&lt; 30;// 默认初始值，必须是2的幂数private  ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2021/09/01/Redis%E6%8C%81%E4%B9%85%E5%8C%96-RDB%20%E6%8C%81%E4%B9%85%E5%8C%96/" title="Redis-RDB"><img class="post_bg" src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2b2ebd2f2b1d44eeb23697fd203b359e~tplv-k3u1fbpfcp-watermark.image?" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Redis-RDB"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/09/01/Redis%E6%8C%81%E4%B9%85%E5%8C%96-RDB%20%E6%8C%81%E4%B9%85%E5%8C%96/" title="Redis-RDB">Redis-RDB</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-01T04:43:44.000Z" title="发表于 2021-09-01 12:43:44">2021-09-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Redis/">Redis</a></span></div><div class="content">一. RDB 简介
-RDB是Redis用来进行持久化的一种方式，是把当前内存中的数据集快照写入磁盘，也就是 Snapshot 快照（数据库中所有键值对数据）。恢复时是将快照文件直接读到内存里。
-
-二. 触发方式①. 自动触发
-1. save
-这里是用来配置触发 Redis的 RDB 持久化条件，也就是什么时候将内存中的数据保存到硬盘。比如“save m n”。表示m秒内数据集存在n次修改时，自动触发bgsave（这个命令下面会介绍，手动触发RDB持久化的命令）
-
-默认如下配置：
-123save 900 1：表示900 秒内如果至少有 1 个 key 的值变化，则保存save 300 10：表示300 秒内如果至少有 10 个 key 的值变化，则保存save 60 10000：表示60 秒内如果至少有 10000 个 key 的值变化，则保存
-
-2. stop-writes-on-bgsave-error
-默认值为yes。当启用了RDB且最后一次后台保存数据失败，Redis是否停止接收数据。这会让用户意识到数据没有正确持久化到磁盘上，否则没有人会注意到灾难（disaster）发生了。如 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2021/09/01/Redis%E6%8C%81%E4%B9%85%E5%8C%96-AOF%E6%8C%81%E4%B9%85%E5%8C%96/" title="Redis-AOF"><img class="post_bg" src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a5d9804a71ee4835a8487bc0a1f66667~tplv-k3u1fbpfcp-watermark.image?" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Redis-AOF"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/09/01/Redis%E6%8C%81%E4%B9%85%E5%8C%96-AOF%E6%8C%81%E4%B9%85%E5%8C%96/" title="Redis-AOF">Redis-AOF</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-01T04:43:44.000Z" title="发表于 2021-09-01 12:43:44">2021-09-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Redis/">Redis</a></span></div><div class="content">一. AOF简介
+12345678910111213141516171819202122232425262728293031323334353637383940//版本号private static final long serialVersionUID = 7249069246763182397L;// node数组最大容量：2^30=1073741824private static final int MAXIMUM_CAPACITY = 1 &lt;&lt; 30;// 默认初始值，必须是2的幂数private  ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2021/09/01/Redis%E6%8C%81%E4%B9%85%E5%8C%96-AOF%E6%8C%81%E4%B9%85%E5%8C%96/" title="Redis-AOF"><img class="post_bg" src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a5d9804a71ee4835a8487bc0a1f66667~tplv-k3u1fbpfcp-watermark.image?" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Redis-AOF"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/09/01/Redis%E6%8C%81%E4%B9%85%E5%8C%96-AOF%E6%8C%81%E4%B9%85%E5%8C%96/" title="Redis-AOF">Redis-AOF</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-01T04:43:44.000Z" title="发表于 2021-09-01 12:43:44">2021-09-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Redis/">Redis</a></span></div><div class="content">一. AOF简介
 与内存快照保存当前内存中的数据所不同，AOF持久化是通过保存Redis服务器所执行的写命令来记录数据库状态的。即每执行一个命令，就会把该命令写到日志文件里。
 
 二. AOF 配置①. appendonly：默认值为no
@@ -221,7 +210,18 @@ everysec 表示每秒执行一次fsync，可能会导致丢失这1s数据。通�
 
 
 ④、no-appendfsync-on-rewrite：默认值为no。
-在aof重写或者写入rdb文件的时候，会执行大量IO，此时对于everysec和always的aof模式来说，执行f ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2021/08/29/G1%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8/" title="G1垃圾回收器"><img class="post_bg" src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/97ec1ef1d1544d46abae5fe7297cc336~tplv-k3u1fbpfcp-watermark.image?" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="G1垃圾回收器"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/08/29/G1%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8/" title="G1垃圾回收器">G1垃圾回收器</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-29T04:43:44.000Z" title="发表于 2021-08-29 12:43:44">2021-08-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/JVM/">JVM</a></span></div><div class="content">一. G1垃圾回收器介绍
+在aof重写或者写入rdb文件的时候，会执行大量IO，此时对于everysec和always的aof模式来说，执行f ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2021/09/01/Redis%E6%8C%81%E4%B9%85%E5%8C%96-RDB%20%E6%8C%81%E4%B9%85%E5%8C%96/" title="Redis-RDB"><img class="post_bg" src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2b2ebd2f2b1d44eeb23697fd203b359e~tplv-k3u1fbpfcp-watermark.image?" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Redis-RDB"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/09/01/Redis%E6%8C%81%E4%B9%85%E5%8C%96-RDB%20%E6%8C%81%E4%B9%85%E5%8C%96/" title="Redis-RDB">Redis-RDB</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-01T04:43:44.000Z" title="发表于 2021-09-01 12:43:44">2021-09-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Redis/">Redis</a></span></div><div class="content">一. RDB 简介
+RDB是Redis用来进行持久化的一种方式，是把当前内存中的数据集快照写入磁盘，也就是 Snapshot 快照（数据库中所有键值对数据）。恢复时是将快照文件直接读到内存里。
+
+二. 触发方式①. 自动触发
+1. save
+这里是用来配置触发 Redis的 RDB 持久化条件，也就是什么时候将内存中的数据保存到硬盘。比如“save m n”。表示m秒内数据集存在n次修改时，自动触发bgsave（这个命令下面会介绍，手动触发RDB持久化的命令）
+
+默认如下配置：
+123save 900 1：表示900 秒内如果至少有 1 个 key 的值变化，则保存save 300 10：表示300 秒内如果至少有 10 个 key 的值变化，则保存save 60 10000：表示60 秒内如果至少有 10000 个 key 的值变化，则保存
+
+2. stop-writes-on-bgsave-error
+默认值为yes。当启用了RDB且最后一次后台保存数据失败，Redis是否停止接收数据。这会让用户意识到数据没有正确持久化到磁盘上，否则没有人会注意到灾难（disaster）发生了。如 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2021/08/29/G1%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8/" title="G1垃圾回收器"><img class="post_bg" src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/97ec1ef1d1544d46abae5fe7297cc336~tplv-k3u1fbpfcp-watermark.image?" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="G1垃圾回收器"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/08/29/G1%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8/" title="G1垃圾回收器">G1垃圾回收器</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-29T04:43:44.000Z" title="发表于 2021-08-29 12:43:44">2021-08-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/JVM/">JVM</a></span></div><div class="content">一. G1垃圾回收器介绍
 Garbage First 简称 G1，是继 CMS 垃圾回收器之后，又一款并发的垃圾回收器。
 在 JDK7 中被去掉 Experimental 标识，开始可以被正式使用
 在 JDK9 中被 JVM 设置为默认的垃圾回收器。G1 是垃圾收集器发展史上的一个新的里程碑
